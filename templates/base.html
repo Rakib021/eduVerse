@@ -10,10 +10,10 @@
   </head>
   <body>
     <!-- navigation bar -->
-              <nav class="navbar navbar-expand-lg  navbar-light bg-light fixed-top scrolling-navbar">
+              <nav class="navbar navbar-expand-lg  navbar-light bg-light fixed-top ">
                 <a  style="text-decoration: none; font-size:30px; color:white;" href="{% url 'index' %}">EduVerse</a>
                 <div class="container" >
-                      <a class="navbar-brand" href="{% url 'index' %}" style="color:#8034eb;" >Home</a>
+                      <a class="navbar-brand" href="{% url 'index' %}" style="color:white;" >Home</a>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
                            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
                            <span class="navbar-toggler-icon"></span>
@@ -21,31 +21,33 @@
                       <div class="collapse navbar-collapse" id="basicExampleNav" >
                         <ul class=" navbar-nav  mr-auto smooth-scroll " >
                                 <li class="nav-item">
-                                   <a class="nav-link" style="color:#8034eb;" href="{% url 'curriculum:standard_list' %}">Curriculum</a>
+                                   <a class="nav-link" style="color:white;" href="{% url 'curriculum:standard_list' %}">Curriculum</a>
                                 </li>
                                 {% if user.is_superuser %}
                                 <li class="nav-item ">
-                                   <a class="nav-link" style="color:#8034eb;" href="{% url 'admin:index' %}">Admin</span> </a>
+                                   <a class="nav-link" style="color:white;" href="{% url 'admin:index' %}">Admin</span> </a>
                                 </li>
                                 {%endif%}
                                 {% if user.is_authenticated %}
                                     <li class="nav-item  ">
-                                     <a class="nav-link" style="color:#8034eb;" href="{% url 'user_logout' %}">Logout</a>
+                                     <a class="nav-link" style="color:white;" href="{% url 'user_logout' %}">Logout</a>
                                     </li>
                                 {% else %}
                                     <li class="nav-item ">
-                                        <a class="nav-link" style="color:#8034eb;" href="{% url 'user_login' %}">Login</a>
+                                        <a class="nav-link" style="color:white;" href="{% url 'user_login' %}">Login</a>
                                     </li>
                                     <li class="nav-item " >
-                                       <a class="nav-link" style="color:#8034eb;" href="{% url 'register' %}">Register</span> </a>
+                                       <a class="nav-link" style="color:white;" href="{% url 'register' %}">Register</span> </a>
                                     </li>
                                 {% endif %}
                                 <li class="nav-item">
-                                   <a class="nav-link" style="color:#8034eb;" href="{% url 'contact' %}">Contact Us</a>
+                                   <a class="nav-link" style="color:white;" href="{% url 'contact' %}">Contact Us</a>
                                 </li>
+                                {% if user.is_authenticated %}
                                 <li class="nav-item">
-                                   <a class="nav-link" style="color:#8034eb;" href="https://github.com/Rakib021/eduVerse">GitHub</a>
+                                   <a class="nav-link" style="color:white;" href="https://github.com/Rakib021/eduVerse">GitHub</a>
                                 </li>
+                                {% endif %}
                                
 
                         </ul>
@@ -86,7 +88,7 @@
                   </div>
         </div>
         <div class="footer-copyright text-center py-3">
-            <p>©Updated 2023</p>
+            <p>©Updated 2024</p>
         </div>
       </div>
     </footer>

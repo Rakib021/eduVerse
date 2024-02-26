@@ -26,7 +26,7 @@ class UserProfileInfoForm(forms.ModelForm):
     parent = 'parent'
     user_types = [
         (student, 'student'),
-        (parent, 'parent'),
+        (teacher, 'teacher'),
     ]
     user_type = forms.ChoiceField(required=True, choices=user_types)
 

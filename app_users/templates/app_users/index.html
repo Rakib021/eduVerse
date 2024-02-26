@@ -52,12 +52,7 @@
                   <div class="row d-flex justify-content-center mb-4">
                     <!-- class column -->
                     <div class="col-md-8">
-                      <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptate
-                                        hic
-                                        provident nulla repellat
-                                        facere esse molestiae ipsa labore porro minima quam quaerat rem, natus repudiandae debitis
-                                        est
-                                        sit pariatur.</p>
+                      <p class="grey-text"> Understand why you're taking the course and what you hope to achieve by the end of it. Whether it's acquiring new skills, expanding your knowledge, or advancing your career, having clear goals will help guide your learning journey..</p>
                     </div>
                   </div>
                   <!-- class row2 for cards -->
@@ -88,20 +83,16 @@
       <h2 class="mb-5 font-weight-bold" style="color:purple;">Meet Our Faculty</h2>
       <div class="row d-flex justify-content-center mb-4">
           <div class="col-md-8">
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptate
-                              hic
-                              provident nulla repellat
-                              facere esse molestiae ipsa labore porro minima quam quaerat rem, natus repudiandae debitis
-                              est
-                              sit pariatur.</p>
+            <p class="grey-text">Their dedication to fostering critical thinking, inspiring curiosity, and nurturing future leaders is truly commendable.</p>
           </div>
           <div class="row d-flex justify-content-center mb-3">
           {% for teacher in teachers %}
           <div class="card mb-3 mr-5 ml-3" style="max-width: 500px;">
             <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img src="{{teacher.profile_pic.url|default_if_none:'#'}}" class="card-img" alt="No image found">
-                      </div>
+              <div class="col-md-4">
+           
+                
+              </div>
                       <div class="col-md-8">
                         <div class="card-body">
                           <h5 class="card-title" style="color:purple;">{{teacher.user.username}}</h5>

@@ -91,17 +91,16 @@ class LessonDetailView(DetailView, FormView):
 
 
 class LessonCreateView(CreateView):
-    fields = ('lesson_id','name','position','image','video','ppt','Notes')
     form_class = LessonForm
     context_object_name = 'subject'
-    model= Subject
+    model = Subject
     template_name = 'curriculum/lesson_create.html'
 
     def get_success_url(self):
         self.object = self.get_object()
         standard = self.object.standard
-        return reverse_lazy('curriculum:lesson_list',kwargs={'standard':standard.slug,
-                                                             'slug':self.object.slug})
+        return reverse_lazy('curriculum:lesson_list', kwargs={'standard': standard.slug, 'slug': self.object.slug})
+
 
 
     def form_valid(self, form, *args, **kwargs):
