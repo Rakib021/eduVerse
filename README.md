@@ -2,6 +2,8 @@
 
 ## Bengali Education Portal
 
+#Live : https://eduverse-ecmb.onrender.com/
+
 This website serves as an educational platform tailored for Bengali students, teachers, and administrators, providing a seamless experience for accessing and sharing educational resources. Built using Django, Javascript, HTML, CSS, and Bootstrap, it incorporates a range of features to enhance the learning process.
 
 ### Features:
